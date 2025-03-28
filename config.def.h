@@ -185,6 +185,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
+#define AltMask Mod1Mask
 #define CTRL_SHIFT (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
@@ -202,6 +203,7 @@ static Shortcut shortcuts[] = {
     { CTRL_SHIFT,           XK_Y,           selpaste,       {.i =  0} },
 	{ CTRL_SHIFT,           XK_V,           clippaste,      {.i =  0} },
 	{ CTRL_SHIFT,           XK_Num_Lock,    numlock,        {.i =  0} },
+	{ AltMask,           XK_Return,      newterm,        {.i =  0} },
 };
 
 /*
