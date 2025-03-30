@@ -210,13 +210,13 @@ static Shortcut shortcuts[] = {
 	{ CTRL_SHIFT,           XK_M,           zoom,           {.f = +1} },
 	{ CTRL_SHIFT,           XK_N,           zoom,           {.f = -1} },
     { CTRL_SHIFT,           XK_B,           zoomreset,      {.f =  0} },
-	{ CTRL_SHIFT,           XK_J,           kscrollup,      {.i = -1} },
-    { CTRL_SHIFT,           XK_K,           kscrolldown,    {.i = -1} },
+    { CTRL_SHIFT,           XK_J,           kscrolldown,    {.i = -1} },
+    { CTRL_SHIFT,           XK_K,           kscrollup,      {.i = -1} },
 	{ CTRL_SHIFT,           XK_C,           clipcopy,       {.i =  0} },
     { CTRL_SHIFT,           XK_Y,           selpaste,       {.i =  0} },
 	{ CTRL_SHIFT,           XK_V,           clippaste,      {.i =  0} },
 	{ CTRL_SHIFT,           XK_Num_Lock,    numlock,        {.i =  0} },
-	{ AltMask,           XK_Return,      newterm,        {.i =  0} },
+	{ AltMask,              XK_Return,      newterm,        {.i =  0} },
 };
 
 /*
