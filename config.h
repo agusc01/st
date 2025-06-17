@@ -7,6 +7,8 @@
  */
 static char *font = "Liberation Mono:pixelsize=24:antialias=true:autohint=true";
 static int borderpx = 7;
+/* bg opacity */
+float alpha = 0.7;
 
 /*
  * What program is execed by st depends of these precedence rules:
