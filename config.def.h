@@ -1,15 +1,14 @@
 /* See LICENSE file for copyright and license details. */
-
+#define DESKTOP_CONFIG 1                        /* 1 means desktop, 0 means laptop */
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+#if DESKTOP_CONFIG
 static char *font = "Liberation Mono:pixelsize=24:antialias=true:autohint=true";
 static int borderpx = 7;
-/* bg opacity */
-float alpha = 0.7;
-
+float alpha = 0.85f;
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -19,6 +18,21 @@ float alpha = 0.7;
  * 5: value of shell in config.h
  */
 static char *shell = "/usr/bin/fish";
+#else
+static char *font = "Liberation Mono:pixelsize=18:antialias=true:autohint=true";
+static int borderpx = 7;
+float alpha = 0.85f;
+/*
+ * What program is execed by st depends of these precedence rules:
+ * 1: program passed with -e
+ * 2: scroll and/or utmp
+ * 3: SHELL environment variable
+ * 4: value of shell in /etc/passwd
+ * 5: value of shell in config.h
+ */
+static char *shell = "/usr/bin/fish";
+#endif
+
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
